@@ -39,6 +39,16 @@ button {
   align-items: center;
   text-align: center;
 
-  
+  max-width: 40ch;
+  padding-bottom: 100px;
+
+  align-self: center;
+  justify-self: center;
+
+  img {
+    height: 60px;
+    margin-bottom: 20px;
+  }
 }
+
 
