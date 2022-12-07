@@ -55,12 +55,22 @@
   a {
     color: $accent;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
+    position: relative;
 
     &::after {
       content: "";
-      
+      width: 19ch;
+      height: 2px;
+      background-color: $accent;
+      position: absolute;
+      bottom: -5px;
     }
   }
+}
+
+.testimonials {
+  
 }

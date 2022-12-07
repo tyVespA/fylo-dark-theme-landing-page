@@ -128,11 +128,18 @@ button {
 .stay-productive a {
   color: hsl(176deg, 68%, 64%);
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
+  position: relative;
 }
 .stay-productive a::after {
   content: "";
+  width: 19ch;
+  height: 2px;
+  background-color: hsl(176deg, 68%, 64%);
+  position: absolute;
+  bottom: -5px;
 }
 
 nav {
