@@ -1,0 +1,44 @@
+@use "./base" as *;
+
+// NAVIGATION BAR
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    max-width: calc(176px / 2);
+
+    // m-q
+  }
+
+  ul {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+// MAIN BUTTON
+
+button {
+  color: $neutral;
+  background: $cta-gradient;
+  padding: 15px;
+  border-radius: 30px;
+  font-weight: 700;
+  min-width: 250px;
+}
+
+// Info grid item
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  text-align: center;
+
+  
+}
+
