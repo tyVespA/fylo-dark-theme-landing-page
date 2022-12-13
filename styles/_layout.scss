@@ -44,10 +44,6 @@
   padding-top: 30px;
   background-image: url(../images/bg-curvy-mobile.svg);
 
-  img {
-    max-width: 600px;
-  }
-
   @media screen and (max-width: 949px) {
     background-color: $intro--email-bg;
   }
@@ -99,10 +95,6 @@
 
   padding-inline: 10px;
   padding-bottom: 150px;
-
-  img {
-    max-width: 500px;
-  }
 
   h2 {
     padding-bottom: 20px;
