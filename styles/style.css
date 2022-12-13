@@ -60,6 +60,10 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+.display-none {
+  display: none;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -496,6 +500,7 @@ main {
 }
 
 .cta-two {
+  border-radius: 15px;
   position: absolute;
   bottom: 0;
   left: 20px;
@@ -523,27 +528,43 @@ main {
 @media (min-width: 950px) {
   .cta-two form {
     gap: 15px;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     width: 100%;
   }
 }
-.cta-two form input {
-  margin-bottom: 20px;
+@media (min-width: 950px) {
+  .cta-two form .input-and-error {
+    margin-bottom: 0;
+    flex-basis: 70%;
+  }
+}
+.cta-two form .input-and-error input {
+  margin-bottom: 5px;
   padding: 15px 30px;
   border-radius: 30px;
   font-size: 0.8rem;
   outline: none;
+  width: 100%;
 }
 @media (min-width: 950px) {
-  .cta-two form input {
-    margin-bottom: 0;
+  .cta-two form .input-and-error input {
     padding: 10px 30px;
-    flex-basis: 70%;
   }
+}
+.cta-two form .input-and-error .error {
+  text-align: start;
+  margin-left: 30px;
+  color: hsl(0deg, 100%, 63%);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.cta-two form button {
+  margin-top: 20px;
 }
 @media (min-width: 950px) {
   .cta-two form button {
+    margin-top: 0;
     flex-basis: 30%;
     text-align: center;
     line-height: 1;

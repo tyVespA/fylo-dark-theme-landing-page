@@ -63,6 +63,12 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+// HELPER CLASS
+
+.display-none {
+  display: none;
+}
+
 // Colors
 
 $main-bg: hsl(218, 28%, 13%);
@@ -89,7 +95,6 @@ ul {
     text-align:center;
   }
   a {
-
     text-decoration:none;
     color:white;
   }

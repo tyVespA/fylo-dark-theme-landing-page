@@ -131,6 +131,7 @@ main {
 }
 
 .cta-two {
+  border-radius: 15px;
   position: absolute;
   bottom: 0;
   left: 20px; 
@@ -159,27 +160,43 @@ main {
     
     @include widescreens {
       gap: 15px;
-      align-items: center;
+      align-items: flex-start;
       flex-direction: row;
       width: 100%;
     }
 
-    input {
-      margin-bottom: 20px;
-      padding: 15px 30px;
-      border-radius: 30px;
-      font-size: 0.8rem;
-      outline: none;
-
+    .input-and-error {
       @include widescreens {
         margin-bottom: 0;
-        padding: 10px 30px;
         flex-basis: 70%;
+      }
+
+      input {
+        margin-bottom: 5px;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        outline: none;
+        width: 100%; 
+
+        @include widescreens {
+          padding: 10px 30px;
+        }
+      }
+
+      .error {
+        text-align: start;
+        margin-left: 30px;
+        color: $error;
+        font-size: 0.7rem;
+        font-weight: 700;
       }
     }
 
     button {
+      margin-top: 20px;
       @include widescreens {
+        margin-top: 0;
         flex-basis: 30%;
         text-align: center;
         line-height: 1;
