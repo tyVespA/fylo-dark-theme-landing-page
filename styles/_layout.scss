@@ -43,6 +43,11 @@
 .hero-section-one {
   padding-top: 30px;
   background-image: url(../images/bg-curvy-mobile.svg);
+
+  img {
+    max-width: 600px;
+  }
+
   @media screen and (max-width: 949px) {
     background-color: $intro--email-bg;
   }
@@ -57,12 +62,9 @@
 
 .hero-section-two {
   padding-bottom: 125px;
+  
   @media screen and (max-width: 949px) {
     background-color: $main-bg;
-  }
-
-  @include widescreens {
-    padding-bottom: 200px;
   }
 }
 
@@ -71,7 +73,11 @@
 .info-grid {
   display: grid;
   grid-template-columns: 1fr;
-  // m-q
+  
+  @include widescreens {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+  }
 
   margin: 0 auto;
   padding-bottom: 60px;
@@ -80,22 +86,48 @@
 // STAY_PRODUCTIVE SECTION
 
 .stay-productive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  @include widescreens {
+    flex-direction: row;
+    max-width: 1100px;
+    margin-inline: auto;
+  }
+
   padding-inline: 10px;
   padding-bottom: 150px;
 
   img {
-    padding-bottom: 50px;
+    max-width: 500px;
   }
 
   h2 {
     padding-bottom: 20px;
+
+    @include widescreens {
+      font-size: 2rem;
+      max-width: 15ch;
+    }
   }
 
   p {
     padding-bottom: 20px;
   }
 
+  .redirect-link {
+    display: inline-block;
+  
+    &:hover {
+      filter: brightness(3);
+    }
+  }
+
   a {
+    display: inline-block;
+    flex-grow: 0;
     color: $accent;
     display: flex;
     justify-content: flex-start;
@@ -129,21 +161,28 @@
 
   padding-inline: 20px;
   padding-bottom: 250px;
+  max-width: 1300px;
+  margin-inline: auto;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -25px;
-    left: 20px;
-    background-image: url(../images/bg-quotes.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 25px;
-    width: 25px;
+  @include widescreens {
+    font-size: 0.9rem;
   }
 }
 
+// FOOTER
+
+.footer-wrapper {
+  background-color: $footer-bg;
+  position: relative;
+  z-index: -2;
+}
+
 footer {
+  position: relative;
+  z-index: -1;
+
+  max-width: 1200px;
+  margin-inline: auto;
   background-color: $footer-bg;
   padding-top: 250px;
   padding-bottom: 50px;
@@ -154,6 +193,12 @@ footer {
 
   .logo {
     padding-left: 10px;
+
+    @include widescreens {
+      padding-left: 0;
+      margin-bottom: 30px;
+      width: 100px;
+    }
   }
 
   svg {
@@ -165,6 +210,11 @@ footer {
     gap: 20px;
     margin-bottom: 20px;
     margin-top: 40px;
+
+    @include widescreens {
+      max-width: 40ch;
+      margin-block: 0;
+    }
 
     svg {
       flex-shrink: 0;
@@ -181,12 +231,30 @@ footer {
 
   .footer-section-three {
     margin-top: 40px;
+
+    @include widescreens {
+      margin-top: 0;
+    }
   }
 
   .footer-section-three, .footer-section-four {
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
+
+    a:hover {
+      font-weight: 700;
+    }
+
+    //prevents text shifting when hovering
+    a::before {
+      display: block;
+      content: attr(title);
+      font-weight: 700;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
   }
 
   .footer-section-five {
@@ -205,10 +273,32 @@ footer {
       align-items: center;
 
       cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        border: 1px solid $accent;
+
+        svg {
+          fill: $accent;
+        }
+      }
 
       svg {
         transform: scale(0.65);
+        transition: all 0.3s;
+
       }
+    }
+  }
+
+  .footer-items {
+    a {
+      margin-bottom: 10px;
+    }
+
+    @include widescreens {
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
