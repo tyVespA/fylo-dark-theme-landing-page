@@ -2,6 +2,17 @@
 
 // HERO SECTION
 
+.hero {
+  @include widescreens {
+    background-color: $intro--email-bg; 
+    background-image: url(../images/bg-curvy-desktop.svg);
+ 
+   background-repeat: no-repeat;
+   background-position: bottom;
+   background-size: contain;
+   }
+}
+
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -9,29 +20,50 @@
   gap: 20px;
 
   text-align: center;
+
   h1 {
     font-size: 1.5rem;
     padding-bottom: 20px;
+    max-width: 30ch;
+    line-height: 1.5;
+
+    @include widescreens {
+      font-size: 2rem;
+    }
     // m-q
   }
 
   p {
     margin-bottom: 15px;
+    max-width: 50ch;
+    line-height: 1.7;
   }
 }
 
 .hero-section-one {
   padding-top: 30px;
   background-image: url(../images/bg-curvy-mobile.svg);
-
+  @media screen and (max-width: 949px) {
+    background-color: $intro--email-bg;
+  }
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
+
+  @include widescreens {
+    background-image: none; 
+   }
 }
 
 .hero-section-two {
   padding-bottom: 125px;
-  background-color: $main-bg;
+  @media screen and (max-width: 949px) {
+    background-color: $main-bg;
+  }
+
+  @include widescreens {
+    padding-bottom: 200px;
+  }
 }
 
 // GRID SECTION

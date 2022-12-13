@@ -79,7 +79,7 @@ a {
   text-decoration: none;
 }
 
-header, .hero-section {
+header {
   background-color: hsl(217deg, 28%, 15%);
 }
 
@@ -88,6 +88,11 @@ header, main {
   color: hsl(0deg, 0%, 100%);
 }
 
+@media (min-width: 950px) {
+  header {
+    padding: 50px;
+  }
+}
 .hero-section {
   padding-inline: 20px;
   color: hsl(0deg, 0%, 100%);
@@ -102,6 +107,16 @@ button {
   cursor: pointer;
 }
 
+@media (min-width: 950px) {
+  .hero {
+    background-color: hsl(217deg, 28%, 15%);
+    background-image: url(../images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+  }
+}
+
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -112,9 +127,18 @@ button {
 .hero-section h1 {
   font-size: 1.5rem;
   padding-bottom: 20px;
+  max-width: 30ch;
+  line-height: 1.5;
+}
+@media (min-width: 950px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
 }
 .hero-section p {
   margin-bottom: 15px;
+  max-width: 50ch;
+  line-height: 1.7;
 }
 
 .hero-section-one {
@@ -124,10 +148,29 @@ button {
   background-position: bottom;
   background-size: contain;
 }
+@media screen and (max-width: 949px) {
+  .hero-section-one {
+    background-color: hsl(217deg, 28%, 15%);
+  }
+}
+@media (min-width: 950px) {
+  .hero-section-one {
+    background-image: none;
+  }
+}
 
 .hero-section-two {
   padding-bottom: 125px;
-  background-color: hsl(218deg, 28%, 13%);
+}
+@media screen and (max-width: 949px) {
+  .hero-section-two {
+    background-color: hsl(218deg, 28%, 13%);
+  }
+}
+@media (min-width: 950px) {
+  .hero-section-two {
+    padding-bottom: 200px;
+  }
 }
 
 .info-grid {

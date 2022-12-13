@@ -55,6 +55,14 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+// MIXINS
+
+@mixin widescreens {
+  @media (min-width: 950px) {
+    @content
+  }
+}
+
 // Colors
 
 $main-bg: hsl(218, 28%, 13%);
@@ -95,13 +103,19 @@ a {
 
 // Base styles
 
-header, .hero-section {
+header {
   background-color: $intro--email-bg;
 }
 
 header, main {
   padding: 20px;
   color: $neutral;
+}
+
+@include widescreens() {
+  header {
+    padding: 50px;
+  }
 }
 
 .hero-section {
