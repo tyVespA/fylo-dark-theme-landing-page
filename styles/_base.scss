@@ -95,11 +95,25 @@ a {
 
 // Base styles
 
-body {
-  padding: 20px;
+header, .hero-section {
+  background-color: $intro--email-bg;
+}
 
-  background-color: $main-bg;
+.hero-section {
+  background-image: url(../images/bg-curvy-mobile.svg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header, main, .hero-section {
+  padding: 20px;
   color: $neutral;
+}
+
+main {
+  background-color: $main-bg;
+  position: relative;
 }
 
 button {

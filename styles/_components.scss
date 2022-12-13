@@ -25,8 +25,12 @@ button {
   color: $neutral;
   background: $cta-gradient;
   padding: 15px;
+  border: transparent;
   border-radius: 30px;
   font-weight: 700;
+}
+
+button.main-btn {
   min-width: 250px;
 }
 
@@ -54,12 +58,76 @@ button {
 // TESTIMONIAL ITEM
 
 .testimonial-card {
+  background-color: $testimonials-bg;
+  padding: 30px 25px;
+  border-radius: 5px;
 
+  max-width: 50ch;
+
+  p:first-child {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+  }
+
+  // ENDORSER INFO
+
+  .endorser-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 25px;
+    letter-spacing: 1px;
+
+    .endorser-info-pfp {
+      overflow: hidden;
+      max-width: 3em;
+      border-radius: 50%;
+    }
+
+    .endorser-info-name {
+      font-weight: 700;
+      padding-bottom: 5px;
+    }
+    
+    .endorser-info-role {
+      font-size: 0.65rem;
+    }
+  }
 }
 
-// ENDORSER INFO
 
-.endorser-info {
-  
+// CTA TWO
+
+main {
+  position: relative;
 }
 
+.cta-two {
+  position: absolute;
+  bottom: 0;
+  left: 20px; 
+  right: 20px; 
+  margin-inline: auto;
+  max-width: 800px;
+  transform: translateY(50%);
+
+  background-color: $intro--email-bg;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    //mq
+  }
+
+  input {
+    margin-bottom: 20px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+  }
+}
