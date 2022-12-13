@@ -9,18 +9,29 @@
   gap: 20px;
 
   text-align: center;
-
-  padding-top: 30px;
-  padding-bottom: 125px;
-
   h1 {
     font-size: 1.5rem;
+    padding-bottom: 20px;
     // m-q
   }
 
   p {
     margin-bottom: 15px;
   }
+}
+
+.hero-section-one {
+  padding-top: 30px;
+  background-image: url(../images/bg-curvy-mobile.svg);
+
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.hero-section-two {
+  padding-bottom: 125px;
+  background-color: $main-bg;
 }
 
 // GRID SECTION

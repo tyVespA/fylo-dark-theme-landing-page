@@ -83,14 +83,13 @@ header, .hero-section {
   background-color: hsl(217deg, 28%, 15%);
 }
 
-.hero-section {
-  background-image: url(../images/bg-curvy-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+header, main {
+  padding: 20px;
+  color: hsl(0deg, 0%, 100%);
 }
 
-header, main, .hero-section {
-  padding: 20px;
+.hero-section {
+  padding-inline: 20px;
   color: hsl(0deg, 0%, 100%);
 }
 
@@ -109,14 +108,26 @@ button {
   align-items: center;
   gap: 20px;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 125px;
 }
 .hero-section h1 {
   font-size: 1.5rem;
+  padding-bottom: 20px;
 }
 .hero-section p {
   margin-bottom: 15px;
+}
+
+.hero-section-one {
+  padding-top: 30px;
+  background-image: url(../images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.hero-section-two {
+  padding-bottom: 125px;
+  background-color: hsl(218deg, 28%, 13%);
 }
 
 .info-grid {
